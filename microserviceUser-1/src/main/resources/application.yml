@@ -1,0 +1,25 @@
+server:
+   port: 8080
+
+spring:
+    jpa:
+      hibernate:
+        ddl-auto: update        
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+      show-sql: true
+      open-in-view: true
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/criptodb?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+      username: root
+      password: admin
+      hikari:
+        idle-timeout: 10000
+        connection-timeout: 10000
+        validation-timeout: 10000
+        minimum-idle: 5
+        maximum-pool-size: 30
+        max-lifetime: 600000
+          
